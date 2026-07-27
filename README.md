@@ -18,7 +18,7 @@
 
 <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
 
-<img align="right" width="40%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Yathiskumar&theme=github_dark" alt="Most committed languages" />
+<img align="right" width="40%" src="https://raw.githubusercontent.com/Yathiskumar/Yathiskumar/output/2-most-commit-language.svg" alt="Most committed languages" />
 
 ### `whoami`
 
@@ -58,13 +58,13 @@ const yathis = {
 
 <div align="center">
 
-<img width="98%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Yathiskumar&theme=github_dark" alt="Profile summary" />
+<img width="98%" src="https://raw.githubusercontent.com/Yathiskumar/Yathiskumar/output/0-profile-details.svg" alt="Profile summary" />
 
-<img height="185" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Yathiskumar&theme=github_dark" alt="Commit stats" />
+<img height="185" src="https://raw.githubusercontent.com/Yathiskumar/Yathiskumar/output/3-stats.svg" alt="Commit stats" />
 <img height="185" src="https://streak-stats.demolab.com?user=Yathiskumar&hide_border=true&background=0D1117&stroke=1F2937&ring=0EA5E9&fire=6EE7B7&currStreakLabel=0EA5E9&sideLabels=94A3B8&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=64748B" alt="Contribution streak" />
 
-<img height="185" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Yathiskumar&theme=github_dark" alt="Repos per language" />
-<img height="185" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Yathiskumar&theme=github_dark&utcOffset=5.5" alt="Productive time of day" />
+<img height="185" src="https://raw.githubusercontent.com/Yathiskumar/Yathiskumar/output/1-repos-per-language.svg" alt="Repos per language" />
+<img height="185" src="https://raw.githubusercontent.com/Yathiskumar/Yathiskumar/output/4-productive-time.svg" alt="Productive time of day" />
 
 </div>
 

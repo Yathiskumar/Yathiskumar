@@ -30,6 +30,29 @@ jobs:
           github_user_name: ${{ github.repository_owner }}
           games: pacman
 
+      # Stats cards are generated here rather than hot-linked from the public
+      # *.vercel.app instance, which shares one GitHub token across all users
+      # and intermittently serves an "ERROR!!! Cards are temporarily rate
+      # limited" SVG. Generating them with our own token removes that failure
+      # mode, and the Action (unlike the hosted API) covers every repo.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate profile summary cards
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          UTC_OFFSET: 5.5
+          THEME: github_dark
+          AUTO_PUSH: false
+
+      - name: Collect summary cards into dist/
+        run: |
+          cp profile-summary-card-output/github_dark/*.svg dist/
+          ls -la dist/
+
       - name: Generate snake animation
         uses: Platane/snk@v3
         with:
