@@ -58,13 +58,27 @@ const yathis = {
 
 <div align="center">
 
-<img width="98%" src="https://raw.githubusercontent.com/Yathiskumar/Yathiskumar/output/0-profile-details.svg" alt="Profile summary" />
-
-<img height="185" src="https://raw.githubusercontent.com/Yathiskumar/Yathiskumar/output/3-stats.svg" alt="Commit stats" />
-<img height="185" src="https://streak-stats.demolab.com?user=Yathiskumar&hide_border=true&background=0D1117&stroke=1F2937&ring=0EA5E9&fire=6EE7B7&currStreakLabel=0EA5E9&sideLabels=94A3B8&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=64748B" alt="Contribution streak" />
+<img height="200" src="https://streak-stats.demolab.com?user=Yathiskumar&hide_border=true&background=0D1117&stroke=1F2937&ring=0EA5E9&fire=6EE7B7&currStreakLabel=0EA5E9&sideLabels=94A3B8&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=64748B" alt="Contribution streak" />
 
 <img height="185" src="https://raw.githubusercontent.com/Yathiskumar/Yathiskumar/output/1-repos-per-language.svg" alt="Repos per language" />
 <img height="185" src="https://raw.githubusercontent.com/Yathiskumar/Yathiskumar/output/4-productive-time.svg" alt="Productive time of day" />
+
+<!--
+  The profile-details and stats cards need a personal access token: the
+  built-in GITHUB_TOKEN cannot read GraphQL contribution data and fails with
+  "Resource not accessible by integration".
+
+  To enable them:
+    1. Create a fine-grained PAT with "Public repositories (read-only)"
+       at https://github.com/settings/personal-access-tokens/new
+    2. gh secret set SUMMARY_GITHUB_TOKEN --repo Yathiskumar/Yathiskumar
+    3. In .github/workflows/profile-graphics.yml, change the summary-cards
+       step's GITHUB_TOKEN to ${{ secrets.SUMMARY_GITHUB_TOKEN }}
+    4. Uncomment the two images below.
+
+<img width="98%" src="https://raw.githubusercontent.com/Yathiskumar/Yathiskumar/output/0-profile-details.svg" alt="Profile summary" />
+<img height="185" src="https://raw.githubusercontent.com/Yathiskumar/Yathiskumar/output/3-stats.svg" alt="Commit stats" />
+-->
 
 </div>
 
