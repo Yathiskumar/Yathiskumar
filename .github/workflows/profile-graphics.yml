@@ -21,8 +21,13 @@ jobs:
       contents: write
 
     steps:
-      # Pac-Man runs first: it is a Node action and must create dist/ as the
-      # runner user. Platane/snk is a Docker action running as root — if it
+      # Checkout must come first — it cleans untracked files from the
+      # workspace, so running it later would delete the generated dist/.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Pac-Man runs before snake: it is a Node action and must create dist/ as
+      # the runner user. Platane/snk is a Docker action running as root — if it
       # creates dist/ first, the Pac-Man step hits EACCES writing into it.
       - name: Generate Pac-Man animation
         uses: abozanona/pacman-contribution-graph@main
@@ -35,9 +40,6 @@ jobs:
       # and intermittently serves an "ERROR!!! Cards are temporarily rate
       # limited" SVG. Generating them with our own token removes that failure
       # mode, and the Action (unlike the hosted API) covers every repo.
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Generate profile summary cards
         uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
@@ -50,6 +52,7 @@ jobs:
 
       - name: Collect summary cards into dist/
         run: |
+          mkdir -p dist
           cp profile-summary-card-output/github_dark/*.svg dist/
           ls -la dist/
 
